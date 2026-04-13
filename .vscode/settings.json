@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "**/.gradle": true,
+    "**/build": true,
+    "**/.idea": true,
+    "**/*.iml": true
+  },
+  "search.exclude": {
+    "**/.gradle": true,
+    "**/build": true,
+    "**/.idea": true
+  }
+}

@@ -36,12 +36,19 @@ From the project root:
 ```bash
 ./gradlew assembleDebug
 ./gradlew installDebug
+./gradlew assembleRelease
 ```
 
 APK output:
 
 ```text
 app/build/outputs/apk/debug/app-debug.apk
+```
+
+Release APK output:
+
+```text
+app/build/outputs/apk/release/app-release.apk
 ```
 
 ## Install Debug APK
@@ -71,7 +78,22 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 rtsp://192.168.1.20:8554/camera
 ```
 
-The app keeps the screen awake while streaming and uses landscape orientation to keep a consistent 16:9 output path.
+The app keeps the screen awake while streaming and preserves a consistent 16:9 output path.
+
+## GitHub APK Downloads
+
+- Every push to `main` builds both debug and release APKs in GitHub Actions.
+- In the Actions tab, open the workflow run and download:
+  - `app-debug-apk`
+  - `app-release-apk`
+- To show a downloadable APK in the GitHub Releases page, create and push a version tag:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+- That tag will trigger the workflow to publish a GitHub Release and attach `app-release.apk` as a release asset.
 
 ## OBS Setup
 
