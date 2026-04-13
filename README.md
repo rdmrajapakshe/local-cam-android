@@ -86,7 +86,7 @@ The app keeps the screen awake while streaming and preserves a consistent 16:9 o
 - In the Actions tab, open the workflow run and download:
   - `app-debug-apk`
   - `app-release-apk`
-- Direct GitHub Release Apk download page:
+- Direct GitHub Release download page:
   - https://github.com/rdmrajapakshe/local-cam-android/releases/tag/v1.0.0
 - To show a downloadable APK in the GitHub Releases page, create and push a version tag:
 
